@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Are You a Fool?</title>
+</head>
+<body onload="displayPrompt()">
+	<h1>Are You a Fool?</h1>
+	<p>Click the button below to find out:</p>
+	<button onclick="displayPrompt()">Click Here</button>
+	<script>
+		function displayPrompt() {
+			var response = prompt("Are you a fool? (Choose Yes or No)");
+			if (response === "Yes" || response === "yes" ) {
+				alert("Good Decision!");
+			} else if (response === "No" || response === "no") {
+				displayPrompt();
+			} else {
+				alert("Invalid response. Please choose Yes or No.");
+				displayPrompt();
+			}
+		}
+	</script>
+</body>
+</html>
